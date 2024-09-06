@@ -81,6 +81,16 @@ header {
   padding: 20px 40px;
   border-radius: 10px;
   max-width: 800px;
+  position: absolute; /* Tämä mahdollistaa sijainnin muuttamisen */
+  bottom: 20%; /* Asettaa sen hieman sivun alaosaan mobiililaitteilla */
+}
+
+/* Isommat näytöt (yli 768px leveät) */
+@media (min-width: 768px) {
+  .home-section .content {
+    top: 10%; /* Siirtää sen ylemmäs suuremmilla näytöillä */
+    bottom: auto; /* Poistaa alaosan sijainnin */
+  }
 }
 
 h1 {
@@ -165,6 +175,7 @@ footer p {
   margin-top: 20px;
 }
 
+/* Media queries for mobile */
 @media (max-width: 768px) {
   .nav-list {
     display: none;
