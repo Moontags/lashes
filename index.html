@@ -83,9 +83,10 @@
 
     <!-- Footer -->
     <footer>
-        <button onclick="scrollToHome()">Back up</button>
+        <button onclick="scrollToTop()">Back up</button>
         <p>Lashes by Jenina © 2024</p>
     </footer>
+    
 
     <script>
         // Hamburger Menu Toggle
@@ -97,9 +98,11 @@
         });
 
         // Scroll to Home
-        function scrollToHome() {
-            document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
-        }
+       // Scroll to top of the page
+       function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
     </script>
 
 </body>
