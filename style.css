@@ -36,13 +36,13 @@ header {
 }
 
 .nav-list li a {
-  color: white;
+  color: #f0c040;
   text-decoration: none;
   font-size: 18px;
 }
 
 .nav-list li a:hover {
-  color: #b4fb9f;
+  color: #fff;
 }
 
 .hamburger {
@@ -56,7 +56,7 @@ header {
 .hamburger span {
   width: 30px;
   height: 3px;
-  background-color: white;
+  background-color: #f0c040;
 }
 
 .section {
@@ -83,6 +83,7 @@ header {
   max-width: 800px;
   position: absolute; /* Tämä mahdollistaa sijainnin muuttamisen */
   bottom: 20%; /* Asettaa sen hieman sivun alaosaan mobiililaitteilla */
+  color: #f0c040;
 }
 
 /* Isommat näytöt (yli 768px leveät) */
@@ -95,16 +96,19 @@ header {
 
 h1 {
   margin: 2rem;
+  letter-spacing: 0.5px;
 }
 
 /* Lisää tilaa h2 ja p tagien väliin */
 h2 {
   margin-bottom: 20px; /* Säädä tarvittaessa */
+  letter-spacing: 0.5px;
 }
 
 p {
   margin-bottom: 20px; /* Varmista, ettei ylimääräistä tilaa lisätä */
   font-size: 18px;
+  letter-spacing: 0.5px;
 }
 
 /* Palvelut -osio */
@@ -159,12 +163,16 @@ p {
   color: #2d2d2d;
   font-size: 18px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.7); /* Varjoefekti tekstille */
+  letter-spacing: 0.5px;
 }
 
 .contact-section {
   background-color: #040404;
   color: aliceblue;
+}
+
+.services-section h2 {
+  font-size: 28px;
 }
 
 .services-section h3 {
@@ -173,6 +181,7 @@ p {
   font-size: 24px;
   text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3); /* Varjoefekti otsikoille */
   padding: 16px;
+  letter-spacing: 0.5px;
 }
 
 footer {
@@ -230,6 +239,10 @@ footer p {
   /* Palvelut -osio pienemmällä näytöllä */
   .services-section .image {
     flex: 1 1 100%; /* Kuvat allekkain mobiilinäytöllä */
+  }
+
+  .pricing-section h2 {
+    font-size: 28px;
   }
 
   .pricing-section {
