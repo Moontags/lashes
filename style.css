@@ -118,8 +118,16 @@ p {
 
 .pricing-section .image img {
   border-radius: 10px;
-  max-width: 100%; /* Rajoittaa kuvan leveyden säiliöön */
+  max-width: 50%; /* Rajoittaa kuvan leveyden 50% säiliön leveydestä */
   height: auto; /* Säilyttää kuvan korkeus-suhteen */
+  display: block;
+  margin: 0 auto; /* Keskittää kuvan vaakasuunnassa */
+}
+
+@media (max-width: 768px) {
+  .pricing-section .image img {
+    max-width: 80%; /* Suurempi kuva mobiilinäytöillä, mutta ei liian iso */
+  }
 }
 
 /* Palvelut ja hinnasto osioiden keskittäminen */
