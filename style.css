@@ -81,14 +81,14 @@ header {
   border-radius: 10px;
   max-width: 800px;
   position: absolute; /* Tämä mahdollistaa sijainnin muuttamisen */
-  bottom: 20%; /* Asettaa sen hieman sivun alaosaan mobiililaitteilla */
+  bottom: 26%; /* Asettaa sen hieman sivun alaosaan mobiililaitteilla */
   color: #f0c040;
 }
 
 /* Isommat näytöt (yli 768px leveät) */
 @media (min-width: 768px) {
   .home-section .content {
-    top: 10%; /* Siirtää sen ylemmäs suuremmilla näytöillä */
+    top: 14%; /* Siirtää sen ylemmäs suuremmilla näytöillä */
     bottom: auto; /* Poistaa alaosan sijainnin */
   }
 }
