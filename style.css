@@ -173,6 +173,7 @@ p {
 
 .services-section h2 {
   font-size: 28px;
+  letter-spacing: 0.5px;
 }
 
 .services-section h3 {
@@ -253,5 +254,32 @@ footer p {
   .pricing-section .image {
     display: flex;
     justify-content: center; /* Keskittää kuvan vaakasuunnassa */
+  }
+
+  /* iPad-tilan tyylit */
+  @media (max-width: 1024px) and (min-width: 768px) {
+    .services-section p {
+      font-size: 20px; /* Lisää fonttikokoa iPad-tilassa */
+      letter-spacing: 0.5px;
+    }
+
+    .services-section h2 {
+      font-size: 24px; /* Lisää fonttikokoa iPad-tilassa */
+      letter-spacing: 1px;
+    }
+
+    .services-section h3 {
+      font-size: 20px; /* Lisää fonttikokoa iPad-tilassa */
+      letter-spacing: 0.5px;
+    }
+
+    .services-section .images-container {
+      flex-direction: column; /* Kuvat allekkain iPad-tilassa */
+    }
+
+    .services-section .image {
+      flex: 1 1 100%; /* Täyttää koko leveys iPad-tilassa */
+      margin-bottom: 20px; /* Lisää tilaa kuvien väliin */
+    }
   }
 }
