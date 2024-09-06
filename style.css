@@ -1,0 +1,195 @@
+/* Yleiset tyylit */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #040404;
+  position: relative; /* Tämä tarvitaan z-indexin toimimiseksi */
+  z-index: 1000; /* Varmistaa, että header on muiden elementtien päällä */
+}
+
+.logo {
+  color: white;
+  font-size: 28px;
+}
+
+.logo img {
+  height: 75px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  z-index: 1001; /* Varmistaa, että valikko on logon ja hamburger-menu-ikonin päällä */
+}
+
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-list li a:hover {
+  color: #f0c040;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001; /* Varmistaa, että hamburger-menu-ikoni on valikon päällä */
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+}
+
+.section {
+  padding: 50px;
+  text-align: center;
+}
+
+/* Koti-section koko ruudun taustakuvalla ja keskitetty teksti */
+.home-section {
+  background: url("/images/pic2.jpg") no-repeat center center/cover;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.home-section .content {
+  background: rgba(60, 59, 59, 0.5); /* Lievä läpinäkyvä tausta tekstille */
+  padding: 20px 40px;
+  border-radius: 10px;
+  max-width: 800px;
+}
+
+h1 {
+  margin: 2rem;
+}
+
+/* Lisää tilaa h2 ja p tagien väliin */
+h2 {
+  margin-bottom: 20px; /* Säädä tarvittaessa */
+}
+
+p {
+  margin-bottom: 20px; /* Varmista, ettei ylimääräistä tilaa lisätä */
+}
+
+/* Palvelut -osio */
+.services-section .images-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.services-section .image {
+  flex: 1 1 45%; /* Kahden kuvan asettelu vierekkäin */
+}
+
+.services-section .image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.pricing-section .image img {
+  border-radius: 10px;
+  max-width: 100%; /* Rajoittaa kuvan leveyden säiliöön */
+  height: auto; /* Säilyttää kuvan korkeus-suhteen */
+}
+
+/* Palvelut ja hinnasto osioiden keskittäminen */
+.services-section p {
+  text-align: left; /* Tekstin vasemmalle kohdistaminen */
+  margin: 0 auto 20px auto; /* Lisää tilaa rivien väliin ja keskittää tekstin */
+  max-width: 1000px; /* Rajoittaa tekstin leveyden keskelle sivua */
+  padding: 0 15px; /* Lisää hieman tilaa vasemmalta ja oikealta */
+}
+
+.contact-section {
+  background-color: #040404;
+  color: aliceblue;
+}
+
+h3 {
+  margin: 20px 0 10px 0;
+}
+
+footer {
+  background: url("") no-repeat center center/cover;
+  padding: 50px;
+  text-align: center;
+  color: rgb(2, 2, 2);
+}
+
+footer button {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+footer p {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    background-color: #3c3b3b;
+    position: absolute;
+    top: 100px; /* Laskee nav-list elementtiä alaspäin */
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1000; /* Varmistaa, että valikko on muiden elementtien päällä */
+    padding: 10px 0; /* Lisää tilaa ylhäältä ja alhaalta */
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Palvelut -osio pienemmällä näytöllä */
+  .services-section .image {
+    flex: 1 1 100%; /* Kuvat allekkain mobiilinäytöllä */
+  }
+
+  .pricing-section {
+    flex-direction: column;
+    padding: 20px; /* Lisää tilaa hinnaston osioon */
+  }
+
+  .pricing-section .image {
+    display: flex;
+    justify-content: center; /* Keskittää kuvan vaakasuunnassa */
+  }
+}
