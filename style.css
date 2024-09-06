@@ -124,6 +124,14 @@ p {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Pehmeä varjo kuvan ympärillä */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Sujuva siirtymä */
+  margin: 20px 0px;
+}
+
+.services-section .image img:hover {
+  transform: scale(1.05); /* Kuva suurenee hieman hoverin aikana */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Syvempi varjo hoverin aikana */
 }
 
 .pricing-section .image img {
@@ -142,10 +150,16 @@ p {
 
 /* Palvelut ja hinnasto osioiden keskittäminen */
 .services-section p {
-  text-align: left; /* Tekstin vasemmalle kohdistaminen */
-  margin: 0 auto 20px auto; /* Lisää tilaa rivien väliin ja keskittää tekstin */
-  max-width: 1000px; /* Rajoittaa tekstin leveyden keskelle sivua */
-  padding: 0 15px; /* Lisää hieman tilaa vasemmalta ja oikealta */
+  text-align: left;
+  margin: 0 auto 20px auto;
+  max-width: 1000px;
+  padding: 20px;
+  background: #fff; /* Läpinäkyvä tausta */
+  border-radius: 10px;
+  color: #2d2d2d;
+  font-size: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.7); /* Varjoefekti tekstille */
 }
 
 .contact-section {
@@ -153,8 +167,12 @@ p {
   color: aliceblue;
 }
 
-h3 {
+.services-section h3 {
   margin: 20px 0 10px 0;
+  color: #070707;
+  font-size: 24px;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3); /* Varjoefekti otsikoille */
+  padding: 16px;
 }
 
 footer {
@@ -169,6 +187,17 @@ footer button {
   font-size: 18px;
   cursor: pointer;
   border-radius: 20px;
+  border: none; /* Poistaa nappien oletusreunuksen */
+  background-color: #f0c040; /* Taustaväri nappille */
+  color: #040404; /* Tekstiväri nappille */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Varjoefekti nappille */
+  transition: all 0.3s ease; /* Sulava siirtymäefekti */
+}
+
+footer button:hover {
+  background-color: #e0b030; /* Tummempi taustaväri hover-tilassa */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Voimakkaampi varjo hover-tilassa */
+  transform: scale(1.05); /* Pieni suurennus hover-tilassa */
 }
 
 footer p {
