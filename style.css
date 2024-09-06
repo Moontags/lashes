@@ -78,7 +78,6 @@ header {
 
 .home-section .content {
   background: rgba(60, 59, 59, 0.5); /* Lievä läpinäkyvä tausta tekstille */
-  padding: 20px 40px;
   border-radius: 10px;
   max-width: 800px;
   position: absolute; /* Tämä mahdollistaa sijainnin muuttamisen */
