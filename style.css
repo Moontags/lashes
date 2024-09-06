@@ -66,7 +66,7 @@ header {
 
 /* Koti-section koko ruudun taustakuvalla ja keskitetty teksti */
 .home-section {
-  background: url("/images/pic2.jpg") no-repeat center center/cover;
+  background: url("images/pic2.jpg") no-repeat center center/cover;
   color: white;
   height: 100vh;
   display: flex;
